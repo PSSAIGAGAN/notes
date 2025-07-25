@@ -1,0 +1,22 @@
+@SpringBootApplication
+
+->it was inherited by SpringBootConfiguration,AutoConfiguration,ComponentScan.
+
+->SpringBootConfiguration : inside the spring boot application what ever the configuration classes were there it will be automatically configured. auto detected and configuration classes will be given to the container.
+
+->AutoConfiguration : depends on pom.xml what are the dependencies we have given accordingly inside what are the stereo type annotation beans were given those beans will get created automatically inside the container.
+
+->ComponentScan :  under the base packages what ever the classes annotated with stereo type annotation and those classes the bean will get created. 
+
+->it inherits the ComponentScan
+
+->under base package which ever the packages has @Controller, @RestController,@Service,@Repository,@ComponentClasses it is scanned autometically.
+
+->automatically depends on what dependecies that we have given in pom.xml automatically few beans will be configured. 
+
+->Configuration classes will found automatically and it is gone a take that as a configuration file to the context.
+
+->SpringBootApplication annotation has AutoConfiguration annotation it loads the all the configuration classes automatically. 
+
+->Those configuration classes read automatically and it is given to the web application context automatically.
+

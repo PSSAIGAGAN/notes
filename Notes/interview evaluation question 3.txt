@@ -1,0 +1,388 @@
+Final Evaluation Questions:-
+
+Core Java:-
+	1. JDK vs JRE vs JVM
+	2. JVM Architecture
+	3. Array in java? Arrays utility class
+	4. String? Ways to create a string? Immutable or muttable, How strings are stored in memory(SCP)?
+	5. classes in java ? 
+	6. members of a class?
+			member variable, member function, constructor, static block
+			member varaible  - static member variable, instance member variable
+			member function - static member function, instance member function
+	7. When an object created for a class. How memory gets allocated in jvm?  
+			
+	8. primitive type vs reference type ? memory allocation for those types?
+	9. Encapsulation  -> data hiding , making all the fields and create getters / setters to access the data memebrs
+	10.polymorphsim:-
+			1. Compile polymorphism (method overloading)/ - Binding - compile time binding or early binding or static binding
+			2. Runtime polymorphism(Method overriding) - Binding - runtime binding or late binding or dynamic binding
+			
+			Object Casting:- 
+				1. upcasting
+				2. downcasting
+	11. Abstraction:-
+			1. Abstract class
+				
+			2. Interface
+			
+	12. When to use abstract class vs interface
+
+	13.  Basics package.
+	14.  Acccess Modifier. 
+	15.  Non access modifier? final, static ,synchronized, etc
+			If use non  access modifer it changes the default behaviour
+
+				class level
+				variable level
+				method level
+
+				final class Demo{
+					static final int a; // static member varaible -method area memory - initialization
+					final void add(){ // static method - method area memory -cannot override
+
+					}
+				}
+				class Demo1 {
+				}
+			
+	16. 	Inher	itance
+			to access the mebers of one class to another classes
+
+			IS-A (extends)
+			1. single Inhritance
+			2. Multiple Inheritance
+			3. Multilevel Inheritance
+			4. Hierachial Inheritance
+			5. Hybrid Inheritance
+
+			Has-A (creating an object of one class inside another class) - Association
+			1. Aggregation (Weak Association)
+			2. Composition (Strong Association)
+
+	17. When to use IS-A vs HAS-A
+	18. Difference between composition(tightly coupled application) vs aggregation(Loosly coupled application)
+	19. extends vs implements
+	20. Abstract class and interface
+				HAS-A inheritance is not possible
+				IS-A inheritance is possible
+
+	21. If a class is a final class
+				HAS-A inheritance is possible
+				IS-A inheritance is not possible
+	22. Collection
+				class hierachy of collection
+				Each collection classes are backed by one datastructure
+				
+					ArrayList - Array DS
+					LinkedList - Doubly linked list ds
+					vector - array ds
+					
+					Hashset - hash table ds
+					LinkedHashSet - Hashtable _ LinkedList
+					TreeSet - HashTable + Sorting algorithm
+					
+					HashMap - hash table
+	23. When to use what collection class
+					ordered or unoreder
+					duplicate or not
+					null or non null
+
+	24. JDBC
+				Steps to connnect to DB
+				1. load the Driver class
+				2. Create a connection Driver.getConnection(url,username,password)
+				3. statement / PreparedStatement / CallableSatetment		
+				4. execute / executeUpdate / executeQuery
+	25. Exception Handling
+				What is exception
+				Types of Exception
+					1. Checked Exception
+					2. Unchecked Exception
+				What if u are not handle an exception inside ur application  / if u handle an exception in ur application
+				How do u handle an exception
+									
+						try{
+							
+						}catch(Exception e){
+						
+						}finally{
+							ceaning up the resources
+						}
+				Exception propogation
+					The programmer who are writting the code is not willing to handle the exception with try catch
+					instead he is propogating / delegating the exception to the caller function
+
+					void add(){
+						------;
+						-----;
+						try{
+							exception  - handle the exception
+						}catch(Exception e){
+						}
+						-----;
+						-----;
+							
+					}	
+
+					another way:-
+					
+					void add() throws Exception{  //exception propogation
+						------;
+						-----;
+						
+							exception  - handle the exception
+						
+						-----;
+						-----;
+							
+					}		
+
+					How do u propogate thr checked exception / unchecked exception - diff checked vs unchecked 
+
+					how do u create ur own exception / custom exception
+		26. Annotation
+				Meta data or Instruction is given to program during runtime is called as annotation
+				1. before a class - class level annotation
+						@RequestMapping
+						@RestController
+						@Service
+						@Component
+				2. before an interface - interface level annotation
+						@FunctionalInterface
+				3. Before a method - method level 
+						@GetMapping
+						@PutMapping
+							
+				4. before variable
+						@Autowired
+						@NotNull
+						@NotBlank
+					
+				5. Before contrucctor
+						@Autowired
+				6. Before parameters
+						@RequestBody
+						@Valid
+						@PathVariable 
+				How your own / custom annotation
+		
+	
+logging
+	
+sonar qube
+
+maven
+
+git
+		Repository - local git vs remote git(github)
+		git flow - 
+				git init - write program - git add .  git commit ,git remote add origin giturl, git push   	
+				git clone
+				git fetch
+				git fork	
+			
+Spring framework
+			lossly coupled application
+			IOC 
+				Bean Factory
+				ApplicationContext
+						ClassPathXmlApplicationContext
+						AnnotationConfigApplicationContext
+						WebApplicationContext
+			Bean Configuration +  bean definifion
+			1. xml + xml
+			2. xml + Annotation
+			3. Java + Annotation
+					@Configutation + @Bean
+					@Configuration + @ComponentScan + @Component | @Controller | @RestControlller | @Service | @Repsoitory
+			Dependency Injection	
+			Types  of dependency injection
+			@Autowired
+			Bean life cycle method
+			Bean Scope - singleton | prototype
+
+			AOP - basics
+			mvc flow design pattern
+			front controller design pattern	
+			Spring mvc flow
+			spring rest flow
+
+Spring boot
+			what is spring boot?
+			why spring boot over plain spring framework
+			@SpringBootApplication @Component
+			Advantages of spring boot
+			how spring boot makes application to be implemented very rapidly
+			steps to configure database inside the spring application
+			spring data jpa
+			spring rest api			
+				- Rest Archotectutral style rule
+microservices:-	
+			1. distributed architecture
+			2. monolithic vs microservice
+			3. Microservice architecture advantages
+			4. Feign Client / Rest Template - synchronus 
+			   webclient - asynchronous
+			4. Issues are there distributed microservice architecture
+					communcation
+					fault tolerance		
+					managing the configuration 
+				
+				resolve the issue design pattern
+					1. service discovery and registry
+					2. Load Balancer
+					3. gateway design pattern
+					4. circuit breaker
+					5. config client server
+
+				spring cloud 2025.0.0
+					1. netflix Eureka Registry and Discovery
+					2. Client side load balancer / Server Load Balacer - @LoadBalancer
+					3. Spring cloud gateway API
+					4. Resillence 4j
+					5. Spring cloud config server]\
+virtalization
+		types of virtualization
+		virtual machine
+		how gcp use virtalization and gives u one virtual machine to u
+		spring boot application ->jar file -> run inside the virtual machine	
+docker containers and GCP
+		GCP 
+			Saas - hardware + OS + ms office + java + sts + eclipse + vsc
+			Pass - hardware + OS
+			Iaas - hardware - cpu, memory, network
+			region and availability zones
+			virtual machine
+			vpc
+			create a sql nonsql databases
+			
+		docker commands
+				docker info
+				docker version
+				docker image - docker build 
+				docker run - docker run
+				docker stop
+		Spring boot application --> jar file ---> Dockerfile --> dockerize the application to a docker image---> docker run --> 
+		dockerized application will be running inside the container
+
+
+		deploying spring boot app inside virtual machine vs dockerize spring boot app and running inside diff and advatages 
+
+		How do u containerize the spring boot application?
+				Spring boot application --> jar file ---> Dockerfile --> dockerize the application to a docker image---> docker run --> 
+				dockerized application will be running inside the container
+Html/ css - 
+
+js -  Synchronus /  Asynchronus
+
+	Asynchronus
+		callback
+		callback hell
+		Promises
+		Asych Await
+		
+	external API call;
+	1. AJAX - XMLHttpClient
+	2. Fetch API - returns a promises
+	3. Axios - external library	
+	Fetch API vs Axios
+	
+Typescript:-
+	
+	typescript is a superset js.
+	static in type
+	classes, modules, interfaces etc
+
+React js
+		What is react js / Why react
+		component 
+		types of component -  remember the syntax
+			1. class component
+			2. functional components
+		props and state
+		share the data from parent to child.  from child to parent
+		life cycle methods of component
+		React Hooks  - functional component
+		How do u share data between component - props
+		props drilling
+		How do u manage state in react component
+		
+			useState() -  Easiest way to manage the state
+			useReducer() - more defined code of your state
+
+			useContext()
+			Redux
+
+		useContext - how to share state data to child component
+		props vs useContext 
+		useState vs useReducer
+		state - component local state - useState / useReducer- simple
+			   component global state - Redux  - complex
+		How to make an external api call
+			fetch api - post, get, put, delete
+			fetch api asych await
+			axios
+		useEffect
+		Form validate - onBlur,onChange,onSubmit
+		SPA
+		React Routing
+			steps to install and implement react routing inside the react application
+			1. install the routing
+			2. main.tsx u need add <BrowserRouter> from the react routing
+			3. app.tsx add Routes Route with path component to be loaded
+			4. nested route
+			5. dynamic Pathvariable
+			6. useParam
+			7. useNavigation
+		Remaining lifecycle hooks
+
+Java 8 features
+	1. inside the interface u can have also implemented methods
+		interface Demo{
+			static void add(){
+			}
+			default void add1(){
+			}
+		} 
+	2. static vs default method
+	3. functional interface
+			1. Predefined functional interface
+				Predicate
+				Consumer
+				Supplier
+				Producer
+			2. customer functional interface
+
+
+	4. Lamda expression
+			
+	5. Stream API
+			
+				1. source
+					array / collection
+					.stream() - method to create a stream
+					Stream.of() - method to create a stream
+				2. intermediate operation
+					filter
+					map
+					Sorted
+				3. terminal operation
+					forEach
+					collect
+					findFirst
+	6. Optional
+				isEmpty()
+				isPresent
+				.get()
+				.orElseThrow
+
+
+
+
+
+
+
+
+
+
